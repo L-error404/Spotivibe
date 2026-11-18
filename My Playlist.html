@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Playlist</title>
+<link rel="icon" type="logo/.jpg" href="logo.jpg">
+<link rel="stylesheet" href="MyPlaylist.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="music-player" id="player">
+    <a href="Homepage.html" class="home-link">⌂ Home</a>
+    <div class="album"><!--<div class="music-icon" id="icon">🎧</div>--></div>
+    <h2 id="title">Tahanan</h2>
+    <p id="artist">El Manu</p>
+    <audio id="audio" controls src="./tahanan.mp3"></audio>
+    
+        <div class="lyrics" id="lyrics">
+      <h3>Lyrics</h3>
+      <div class="line" data-time="0">Intro</div>
+      <div class="line" data-time="16">Nagsimula ang lahat</div>
+      <div class="line" data-time="20">Sa isang kanta</div>
+      <div class="line" data-time="23">"Bakit ngayon ka lang?"</div>
+      <div class="line" data-time="26">Sabay nagtagpo ating mata</div>
+      <div class="line" data-time="30">Ilang beses humindi</div>
+      <div class="line" data-time="33">Buti ay 'di ako nakinig</div>
+      <div class="line" data-time="37">Tadhana na ang bumulong sa 'kin</div>
+      <div class="line" data-time="45">Di ba't sinabi sa'yo</div>
+      <div class="line" data-time="52">Ipaglalaban ko</div>
+      <div class="line" data-time="57">Tahanan mo ako</div>
+      <div class="line" data-time="60">Di magbabago yun</div>
+      <div class="line" data-time="64">At pag ika'y nawawala</div>
+      <div class="line" data-time="67">Tingin ka lang saking mata</div>
+      <div class="line" data-time="70">Pagmamahal sa'yo</div>
+      <div class="line" data-time="74">Di mauubos yun</div>
+      <div class="line" data-time="78">Lalabanan ko lahat para sa'yo</div>
+      <div class="line" data-time="84">Basta't nandito lang ako</div>
+      <div class="line" data-time="88">Sa tabi mo</div>
+      <div class="line" data-time="93">Aaminin sa'yo</div>
+      <div class="line" data-time="98">Ang daming beses na muntikang sumuko</div>
+      <div class="line" data-time="107">Ngunit nakayanan ko</div>
+      <div class="line" data-time="112">Pagkat walang hanggan ang pag-ibig niya</div>
+      <div class="line" data-time="120">[Instrumental Break]</div>
+      <div class="line" data-time="146">Tahanan mo ako</div>
+      <div class="line" data-time="149">Di magbabago yun</div>
+      <div class="line" data-time="153">At pag ika'y nawawala</div>
+      <div class="line" data-time="156">Tingin ka lang sa 'king mata</div>
+      <div class="line" data-time="160">Pagmamahal sa'yo</div>
+      <div class="line" data-time="163">Di mauubos yun</div>
+      <div class="line" data-time="166">Sabay natin na dadaanan ang lahat</div>
+      <div class="line" data-time="173">Hangga't sa dulo ng ating pagmamahal</div>
+      <div class="line" data-time="180">Hangga't sa kunin tayo ng Maykapal</div>
+    </div>
+  </div>
+
+  <div class="playlist">
+    <h2>My Playlist (10 songs)</h2>
+    <div id="songList"></div>
+  </div>
+
+<div class="hidden" style="display:none !important">
+  <div id="lyric-0">
+    
+    <div class="line" data-time="0">Intro</div>
+    <div class="line" data-time="16">Nagsimula ang lahat</div>
+    <div class="line" data-time="20">Sa isang kanta</div>
+    <div class="line" data-time="23">"Bakit ngayon ka lang?"</div>
+    <div class="line" data-time="26">Sabay nagtagpo ating mata</div>
+    <div class="line" data-time="30">Ilang beses humindi</div>
+    <div class="line" data-time="33">Buti ay 'di ako nakinig</div>
+    <div class="line" data-time="37">Tadhana na ang bumulong sa 'kin</div>
+    <div class="line" data-time="45">Di ba't sinabi sa'yo</div>
+    <div class="line" data-time="52">Ipaglalaban ko</div>
+    <div class="line" data-time="57">Tahanan mo ako</div>
+    <div class="line" data-time="60">Di magbabago yun</div>
+    <div class="line" data-time="64">At pag ika'y nawawala</div>
+    <div class="line" data-time="67">Tingin ka lang saking mata</div>
+    <div class="line" data-time="70">Pagmamahal sa'yo</div>
+    <div class="line" data-time="74">Di mauubos yun</div>
+    <div class="line" data-time="78">Lalabanan ko lahat para sa'yo</div>
+    <div class="line" data-time="84">Basta't nandito lang ako</div>
+    <div class="line" data-time="88">Sa tabi mo</div>
+    <div class="line" data-time="93">Aaminin sa'yo</div>
+    <div class="line" data-time="98">Ang daming beses na muntikang sumuko</div>
+    <div class="line" data-time="107">Ngunit nakayanan ko</div>
+    <div class="line" data-time="112">Pagkat walang hanggan ang pag-ibig niya</div>
+    <div class="line" data-time="120">[Instrumental Break]</div>
+    <div class="line" data-time="146">Tahanan mo ako</div>
+    <div class="line" data-time="149">Di magbabago yun</div>
+    <div class="line" data-time="153">At pag ika'y nawawala</div>
+    <div class="line" data-time="156">Tingin ka lang sa 'king mata</div>
+    <div class="line" data-time="160">Pagmamahal sa'yo</div>
+    <div class="line" data-time="163">Di mauubos yun</div>
+    <div class="line" data-time="166">Sabay natin na dadaanan ang lahat</div>
+    <div class="line" data-time="173">Hangga't sa dulo ng ating pagmamahal</div>
+    <div class="line" data-time="180">Hangga't sa kunin tayo ng Maykapal</div>
+  </div>
+</div>
+
+  <div class="hidden" style="display:none !important">
+  <div id="lyric-1">
+    
+    <div class="line" data-time="0">Intro</div>
+    <div class="line" data-time="13">Pana-panahon ng pagkakataon</div>
+    <div class="line" data-time="18">Maibabalik ba ang kahapon?</div>
+    <div class="line" data-time="30">Natatandaan mo pa ba?</div>
+    <div class="line" data-time="35">Nang tayong dalawa ay unang nagkita.</div>
+    <div class="line" data-time="40">Panahon ng kamusmusan</div>
+    <div class="line" data-time="45">Sa piling ng mga bulaklak at halaman.</div>
+    <div class="line" data-time="51">Doon tayo nagsimulang</div>
+    <div class="line" data-time="56">Mangarap at tumula</div>
+    <div class="line" data-time="68">Natatandaan mo pa ba</div>
+    <div class="line" data-time="73">Inukit kong puso sa punong mangga</div>
+    <div class="line" data-time="77">At ang inalay kong gumamela</div>
+    <div class="line" data-time="83">Magkahawak-kamay sa dalampasigan</div>
+    <div class="line" data-time="89">Malayang tulad ng mga ibon</div>
+    <div class="line" data-time="93">Ang gunita ng ating kahapon</div>
+    <div class="line" data-time="98">Ang mga puno't halaman</div>
+    <div class="line" data-time="103">Ay kabiyak ng ating gunita</div>
+    <div class="line" data-time="109">Sa paglipas ng panahon</div>
+    <div class="line" data-time="113">Bakit kailangan ding lumisan</div>
+    <div class="line" data-time="121">Pana-panahon ang pagkakataon</div>
+    <div class="line" data-time="126">Maibabalik ba ang kahapon</div>
+    <div class="line" data-time="143">Ngayon ikaw ay nagbalik</div>
+    <div class="line" data-time="149">At tulad ko rin ang iyong pananabik</div>
+    <div class="line" data-time="154">Makita ang dating kanlungan</div>
+    <div class="line" data-time="159">Tahanan ng ating tula at pangarap</div>
+    <div class="line" data-time="165">Ngayon ay naglaho na</div>
+    <div class="line" data-time="170">Saan hahanapin pa</div>
+    <div class="line" data-time="174">Lumilipas ang panahon</div>
+    <div class="line" data-time="180">Kabiyak ng ating gunita</div>
+    <div class="line" data-time="185">Ang mga puno't halaman</div>
+    <div class="line" data-time="190">Bakit kailangang lumisan</div>
+    <div class="line" data-time="197">Pana-panahon ang pagkakataon</div>
+    <div class="line" data-time="202">Maibabalik ba ang kahapon</div>
+    <div class="line" data-time="209">[Instrumental Break]</div>
+    <div class="line" data-time="229">Lumilipas ang panahon</div>
+    <div class="line" data-time="235">Kabiyak ng ating gunita</div>
+    <div class="line" data-time="240">Ang mga puno't halaman</div>
+    <div class="line" data-time="245">Bakit kailangang lumisan</div>
+    <div class="line" data-time="251">Pana-panahon ang pagkakataon</div>
+    <div class="line" data-time="256">Maibabalik ba ang kahapon</div>
+  </div>
+  </div>
+ 
+
+  <div class="hidden" style="display:none !important">
+<div id="lyric-2">
+    
+  <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="8">Are you someone that I can give my heart to?</div>
+  <div class="line" data-time="14">Or just the poison that I'm drawn to?</div>
+  <div class="line" data-time="18">It can be hard to tell the difference late at night</div>
+  <div class="line" data-time="24">Play fair, is that a compass in your nature?</div>
+  <div class="line" data-time="29">Or are you tricky?</div>
+  <div class="line" data-time="31">Cause I've been there</div>
+  <div class="line" data-time="34">And baby, I don't need to learn my lesson twice</div>
+  <div class="line" data-time="41">But if you really wanna go there</div>
+  <div class="line" data-time="45">You should know I</div>
+  <div class="line" data-time="46">I need someone to hold me close, deeper than I've ever known</div>
+  <div class="line" data-time="51">Whose love feels like a rodeo, knows just how to take control</div>
+  <div class="line" data-time="55">When I'm vulnerable, he's straight-talking to my soul</div>
+  <div class="line" data-time="58">Conversation overload, got me feeling vertigo</div>
+  <div class="line" data-time="64">Are you somebody who can go there?</div>
+  <div class="line" data-time="68">Cause I don't wanna have to show ya</div>
+  <div class="line" data-time="73">If that ain't you, then let me know, yeah</div>
+  <div class="line" data-time="76">Cause training season's over (training season's over)</div>
+  <div class="line" data-time="86">I tried to see my lovers in a good light</div>
+  <div class="line" data-time="92">Don't wanna do it just to be nice</div> 
+  <div class="line" data-time="96">Don't wanna have to teach you how to love me right</div>
+  <div class="line" data-time="102">I hope it hits me like an arrow</div>
+  <div class="line" data-time="107">Someone with some potential</div>
+  <div class="line" data-time="111">Is it too much to ask for, who understands?</div>
+  <div class="line" data-time="117">I need someone to hold me close, deeper than I've ever known</div>
+  <div class="line" data-time="121">Whose love feels like a rodeo, knows just how to take control</div>
+  <div class="line" data-time="125">When I'm vulnerable, he's straight-talking to my soul</div>
+  <div class="line" data-time="129">Conversation overload, got me feeling vertigo</div>
+  <div class="line" data-time="135">Are you somebody who can go there?</div>
+  <div class="line" data-time="139">Cause I don't wanna have to show ya</div>
+  <div class="line" data-time="143">If that ain't you, then let me know, yeah</div>
+  <div class="line" data-time="146">Cause training season's over</div>
+  <div class="line" data-time="149">Can you compete?</div>
+  <div class="line" data-time="151">Now is your time</div>
+  <div class="line" data-time="153">Run when you hear that whistle blow</div>
+  <div class="line" data-time="157">Are you on my team?</div>
+  <div class="line" data-time="159">Or stuck on the sidelines waiting for someone to tell you to go?</div>
+  <div class="line" data-time="170">For someone to tell you to go</div>
+  <div class="line" data-time="174">You should know I</div>
+  <div class="line" data-time="175">I need someone to hold me close, deeper than I've ever known</div>
+  <div class="line" data-time="179">Whose love feels like a rodeo, knows just how to take control</div>
+  <div class="line" data-time="184">When I'm vulnerable, he's straight-talking to my soul (if that ain't you, then let me know, yeah)</div>
+  <div class="line" data-time="187">Conversation overload 'cause training season's over</div>
+  <div class="line" data-time="189">Cause training season's over (training season's over)</div>
+  <div class="line" data-time="205">Training season's over</div>
+  </div>
+  </div>
+  
+<div class="hidden" style="display:none !important">
+<div id="lyric-3">
+    
+     <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="2">Lift your head, baby don't be scared</div>
+  <div class="line" data-time="9">Of the things that could go wrong along the way</div>
+  <div class="line" data-time="15">You'll get by with a smile</div>
+  <div class="line" data-time="22">You can't win at everything but you can try</div>
+  <div class="line" data-time="29">Baby, you don't have to worry</div>
+  <div class="line" data-time="33">Cause there ain't no need to hurry</div>
+  <div class="line" data-time="36">No one ever said that there's an easy way</div>
+  <div class="line" data-time="42">When they're closing all their doors</div>
+  <div class="line" data-time="45">They don't want you anymore</div>
+  <div class="line" data-time="49">This sounds funny but I'll say it anyway</div>
+  <div class="line" data-time="55">Girl, I'll stay through the bad times</div>
+  <div class="line" data-time="62">Even if I have to fetch you everyday</div>
+  <div class="line" data-time="68">We'll get by if you smile</div>
+  <div class="line" data-time="74">You can never be too happy in this life</div>
+  <div class="line" data-time="81">Cause in a world where everybody</div>
+  <div class="line" data-time="84">Hates a happy ending story</div>
+  <div class="line" data-time="88">It's a wonder love can make the world go round</div>
+  <div class="line" data-time="94">But don't let it bring you down</div>
+  <div class="line" data-time="97">And turn your face into a frown</div> 
+  <div class="line" data-time="100">You'll get along with a little prayer and a song</div>
+  <div class="line" data-time="107">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="117">Let me hear you sing it</div>
+  <div class="line" data-time="120">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="132">Cause in a world where everybody</div>
+  <div class="line" data-time="135">Hates a happy ending story</div>
+  <div class="line" data-time="139">It's a wonder love can make the world go round</div>
+  <div class="line" data-time="145">But don't let it bring you down</div>
+  <div class="line" data-time="148">And turn your face into a frown</div>
+  <div class="line" data-time="151">You'll get along with a little prayer and a song</div>
+  <div class="line" data-time="157">Lift your head, baby don't be scared</div>
+  <div class="line" data-time="164">Of the things that could go wrong along the way</div>
+  <div class="line" data-time="170">You'll get by with a smile</div>
+  <div class="line" data-time="177">Now it's time to kiss away those tears goodbye</div>
+  <div class="line" data-time="184">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="194">Let me hear you sing it</div>
+  <div class="line" data-time="159">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="170">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="174">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="175">Tidididi, tidididi, tidididi, didi, didi, dididi</div>
+  <div class="line" data-time="248">With a smile</div>
+  </div>
+</div>
+
+<div class="hidden" style="display:none !important">
+<div id="lyric-4">
+    
+     <div class="line" data-time="0"> Intro</div>
+  <div class="line" data-time="3">Mmm, mmm, mmm</div>
+  <div class="line" data-time="9">Flowers in hand, waiting for me</div>
+  <div class="line" data-time="13">Every word in poetry</div>
+  <div class="line" data-time="16">Won't call me by name, only "baby"</div>
+  <div class="line" data-time="21">The more that you give, the less that I need</div>
+  <div class="line" data-time="24">Everyone says I look happy</div>
+  <div class="line" data-time="29">When it feels right</div>
+  <div class="line" data-time="33">I know that you're wrong for me</div>
+  <div class="line" data-time="37">Gonna wish we never met on the day I leave</div>
+  <div class="line" data-time="41">I brought you down to your knees</div>
+  <div class="line" data-time="45">Cause they say that misery loves company</div>
+  <div class="line" data-time="49">It's not your fault I ruin everything</div>
+  <div class="line" data-time="53">And it's not your fault I can't be what you need</div>
+  <div class="line" data-time="56">Baby, angels like you can't fly down hell with me</div>
+  <div class="line" data-time="63">I'm everything they said I would be</div>
+  <div class="line" data-time="67">La-la-la</div>
+  <div class="line" data-time="70">I'm everything they said I would be</div>
+  <div class="line" data-time="73">I'll put you down slow, love you goodbye</div>
+  <div class="line" data-time="77">Before you let go, just one more time</div> 
+  <div class="line" data-time="81">Take off your clothes, pretend that it's fine</div>
+  <div class="line" data-time="86">A little more hurt won't kill you</div>
+  <div class="line" data-time="88">Tonight, mother says, "You don't look happy"</div>
+  <div class="line" data-time="94">Close your eyes</div>
+  <div class="line" data-time="98">I know that you're wrong for me</div>
+  <div class="line" data-time="102">Gonna wish we never met on the day I leave</div>
+  <div class="line" data-time="106">I brought you down to your knees</div>
+  <div class="line" data-time="110">Cause they say that misery loves company</div>
+  <div class="line" data-time="114">It's not your fault I ruin everything</div>
+  <div class="line" data-time="117">And it's not your fault I can't be what you need</div>
+  <div class="line" data-time="121">Baby, angels like you can't fly down hell with me</div>
+  <div class="line" data-time="128">I'm everything they said I would be</div>
+  <div class="line" data-time="130">La, la, la, la</div>
+  <div class="line" data-time="133">La, la, la</div>
+  <div class="line" data-time="137">La, la, la</div>
+  <div class="line" data-time="140">Oh, ah, ah</div>
+  <div class="line" data-time="140">Ah, oh</div>
+  <div class="line" data-time="148">Ah, oh</div>
+  <div class="line" data-time="153">I know that you're wrong for me</div>
+  <div class="line" data-time="157">Gonna wish we never met on the day I leave</div>
+  <div class="line" data-time="161">I brought you down to your knees</div>
+  <div class="line" data-time="165">Cause they say that misery loves company</div>
+  <div class="line" data-time="169">It's not your fault I ruin everything (Everything)</div>
+  <div class="line" data-time="173">And it's not your fault I can't be what you need</div>
+  <div class="line" data-time="177">Baby, angels like you can't fly down here with me, oh</div>
+  <div class="line" data-time="185">Angels like you can't fly down here with me</div>
+  </div>
+</div>
+
+  <div class="hidden" style="display:none !important">
+<div id="lyric-5">
+    
+     <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="33">I never thought that I would find a way out</div>
+  <div class="line" data-time="37">I never thought I'd hear my heart beat so loud</div>
+  <div class="line" data-time="41">I can't believe there's something left in my chest anymore</div>
+  <div class="line" data-time="46">But goddamn, you got me in love again</div>
+  <div class="line" data-time="50">I used to think that I was made out of stone</div>
+  <div class="line" data-time="54">I used to spend so many nights on my own</div>
+  <div class="line" data-time="58">I never knew I had it in me to dance anymore</div>
+  <div class="line" data-time="62">But goddamn, you got me in love again</div>
+  <div class="line" data-time="66">Show me that heaven's right here, baby</div>
+  <div class="line" data-time="71">Touch me so I know I'm not crazy</div>
+  <div class="line" data-time="74">Never have I ever met somebody like you</div>
+  <div class="line" data-time="78">Used to be afraid of love and what it might do</div>
+  <div class="line" data-time="83">But goddamn, you got me in love again</div>
+  <div class="line" data-time="88">You got me in love again</div>
+  <div class="line" data-time="93">You got me in love again</div>
+  <div class="line" data-time="96">You got me in love again</div>
+  <div class="line" data-time="100">again</div>
+  <div class="line" data-time="103">So many nights, my tears fell harder than rain</div>
+  <div class="line" data-time="107">Scared I would take my broken heart to the grave</div> 
+  <div class="line" data-time="112">I'd rather die than have to live in a storm like before</div>
+  <div class="line" data-time="116">But goddamn (goddamn), you got me in love again</div>
+  <div class="line" data-time="120">Show me that heaven's right here, baby</div>
+  <div class="line" data-time="124">Touch me so I know I'm not crazy</div>
+  <div class="line" data-time="128">Never have I ever met somebody like you</div>
+  <div class="line" data-time="132">Used to be afraid of love and what it might do</div>
+  <div class="line" data-time="137">But goddamn, you got me in love again</div>
+  <div class="line" data-time="142">You got me in love again</div>
+  <div class="line" data-time="146">You got me in love again</div>
+  <div class="line" data-time="150">You got me in love again</div>
+  <div class="line" data-time="154">again</div>
+  <div class="line" data-time="158">I can't believe, I can't believe I finally found someone</div>
+  <div class="line" data-time="162">I'll sink my teeth in disbelief 'cause you're the one that I want</div>
+  <div class="line" data-time="165">I can't believe, I can't believe I'm not afraid anymore</div> 
+  <div class="line" data-time="170">But goddamn, you got me in love again</div>
+  <div class="line" data-time="174">La-la-la, la-la-la</div>
+  <div class="line" data-time="176">La-la-la, la-la-la</div>
+  <div class="line" data-time="178">I never thought that I would find a way out</div>
+  <div class="line" data-time="182">I never thought I'd hear my heart beat so loud</div>
+  <div class="line" data-time="186">I can't believe there's something left in my chest anymore</div>
+  <div class="line" data-time="190">But goddamn, you got me in love again (la-la-la, la-la-la)</div>
+  <div class="line" data-time="201">(La-la-la, la-la-la, oh)</div>
+  <div class="line" data-time="204">I can't believe, I can't believe I finally found someone</div>
+  <div class="line" data-time="208">I'll sink my teeth in disbelief 'cause you're the one that I want</div>
+  <div class="line" data-time="212">I can't believe there's something left inside my chest anymore</div>
+  <div class="line" data-time="216">But goddamn, you got me in love again</div>
+  <div class="line" data-time="222">You got me in love again</div>
+  <div class="line" data-time="226">You got me in love again</div>
+  <div class="line" data-time="230">You got me in love again (and again, and)</div>
+  <div class="line" data-time="235">Again (and again, and again)</div>
+  </div>
+  </div>
+
+<div class="hidden" style="display:none !important">
+<div id="lyric-6">
+    
+     <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="09">Lord I come, I confess</div>
+  <div class="line" data-time="15">Bowing here, I find my rest</div>
+  <div class="line" data-time="22">Without You, I fall apart</div>
+  <div class="line" data-time="28">You're the One that guides my heart</div>
+  <div class="line" data-time="38">Lord, I need You, oh, I need You</div>
+  <div class="line" data-time="46">Every hour I need You</div>
+  <div class="line" data-time="51">My one defense, my righteousness</div>
+  <div class="line" data-time="58">Oh God, how I need You</div>
+  <div class="line" data-time="66">Where sin runs deep, Your grace is more</div>
+  <div class="line" data-time="72">Where grace is found is where You are</div>
+  <div class="line" data-time="80">And where You are, Lord, I am free</div>
+  <div class="line" data-time="86">Holiness is Christ in me</div>
+  <div class="line" data-time="96">Lord, I need You, oh, I need You</div>
+  <div class="line" data-time="102">Every hour I need You</div>
+  <div class="line" data-time="109">My one defense, my righteousness</div>
+  <div class="line" data-time="115">Oh God, how I need You</div>
+  <div class="line" data-time="120">So teach my song to rise to You</div>
+  <div class="line" data-time="128">When temptation comes my way</div> 
+  <div class="line" data-time="133">When I cannot stand, I'll fall on You</div>
+  <div class="line" data-time="139">Jesus, You're my hope and stay</div>
+  <div class="line" data-time="147">Lord, I need You, oh, I need You</div>
+  <div class="line" data-time="154">Every hour I need You</div>
+  <div class="line" data-time="160">My one defense, my righteousness</div>
+  <div class="line" data-time="167">Oh God, how I need You</div>
+  <div class="line" data-time="173">You're my one defense, my righteousness</div>
+  <div class="line" data-time="179">Oh God, how I need You</div>
+  <div class="line" data-time="186">My one defense, my righteousness</div>
+  <div class="line" data-time="192">Oh God, how I need You</div>
+  </div>
+</div>
+
+ <div class="hidden" style="display:none !important">
+<div id="lyric-7">
+    
+     <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="6">Nice to meet you, where you've been?</div>
+  <div class="line" data-time="8">I could show you incredible things</div>
+  <div class="line" data-time="10">Magic, madness, heaven, sin</div>
+  <div class="line" data-time="13">Saw you there and I thought</div>
+  <div class="line" data-time="15">"Oh, my God, look at that face</div>
+  <div class="line" data-time="17">You look like my next mistake</div>
+  <div class="line" data-time="20">Love's a game, wanna play?" Ayy</div>
+  <div class="line" data-time="25">New money, suit and tie</div>
+  <div class="line" data-time="28">I can read you like a magazine</div>
+  <div class="line" data-time="31">Ain't it funny? Rumors fly</div>
+  <div class="line" data-time="33">And I know you heard about me</div>
+  <div class="line" data-time="35">So, hey, let's be friends</div>
+  <div class="line" data-time="37">I'm dying to see how this one ends</div>
+  <div class="line" data-time="40">Grab your passport and my hand</div>
+  <div class="line" data-time="42">I can make the bad guys good for a weekend</div>
+  <div class="line" data-time="45">So it's gonna be forever</div>
+  <div class="line" data-time="48">Or it's gonna go down in flames?</div>
+  <div class="line" data-time="50">You can tell me when it's over, mm</div> 
+  <div class="line" data-time="53">If the high was worth the pain</div>
+  <div class="line" data-time="55">Got a long list of ex-lovers</div>
+  <div class="line" data-time="58">They'll tell you I'm insane</div>
+  <div class="line" data-time="60">Cause you know I love the players</div>
+  <div class="line" data-time="63">And you love the game</div>
+  <div class="line" data-time="65">Cause we're young and we're reckless</div>
+  <div class="line" data-time="68">We'll take this way too far</div>
+  <div class="line" data-time="70">It'll leave you breathless, mm</div>
+  <div class="line" data-time="73">Or with a nasty scar</div>
+  <div class="line" data-time="75">Got a long list of ex-lovers</div>
+  <div class="line" data-time="78">They'll tell you I'm insane</div>
+  <div class="line" data-time="80">But I've got a blank space, baby</div>
+  <div class="line" data-time="84">And I'll write your name</div>
+  <div class="line" data-time="90">Cherry lips, crystal skies</div>
+  <div class="line" data-time="93">I could show you incredible things</div>
+  <div class="line" data-time="96">Stolen kisses, pretty lies</div>
+  <div class="line" data-time="98">You're the king, baby, I'm your queen</div>
+  <div class="line" data-time="100">Find out what you want</div>
+  <div class="line" data-time="103">Be that girl for a month</div>
+  <div class="line" data-time="105">Wait, the worst is yet to come, oh, no</div> 
+  <div class="line" data-time="111">Screaming, crying, perfect storms</div>
+  <div class="line" data-time="113">I can make all the tables turn</div>
+  <div class="line" data-time="116">Rose garden filled with thorns</div>
+  <div class="line" data-time="118">Keep you second guessing, like</div>
+  <div class="line" data-time="120">"Oh, my God, who is she?"</div>
+  <div class="line" data-time="122">I get drunk on jealousy</div>
+  <div class="line" data-time="125">But you'll come back each time you leave</div>
+  <div class="line" data-time="127">Cause, darling, I'm a nightmare dressed like a daydream</div>
+  <div class="line" data-time="130">So it's gonna be forever</div>
+  <div class="line" data-time="133">Or it's gonna go down in flames?</div>
+  <div class="line" data-time="135">You can tell me when it's over, mm</div> 
+  <div class="line" data-time="138">If the high was worth the pain</div>
+  <div class="line" data-time="140">Got a long list of ex-lovers</div>
+  <div class="line" data-time="142">They'll tell you I'm insane</div>
+  <div class="line" data-time="145">Cause you know I love the players</div>
+  <div class="line" data-time="148">And you love the game</div>
+  <div class="line" data-time="150">Cause we're young and we're reckless</div>
+  <div class="line" data-time="153">We'll take this way too far</div>
+  <div class="line" data-time="155">It'll leave you breathless, mm</div>
+  <div class="line" data-time="158">Or with a nasty scar</div>
+  <div class="line" data-time="160">Got a long list of ex-lovers</div>
+  <div class="line" data-time="162">They'll tell you I'm insane</div>
+  <div class="line" data-time="165">But I've got a blank space, baby</div>
+  <div class="line" data-time="169">And I'll write your name</div>
+  <div class="line" data-time="170">Boys only want love if it's torture</div>
+  <div class="line" data-time="175">Don't say I didn't, say I didn't warn ya</div>
+  <div class="line" data-time="180">Boys only want love if it's torture</div>
+  <div class="line" data-time="185">Don't say I didn't, say I didn't warn ya</div>
+  <div class="line" data-time="190">So it's gonna be forever</div>
+  <div class="line" data-time="193">Or it's gonna go down in flames?</div>
+  <div class="line" data-time="195">You can tell me when it's over, mm</div> 
+  <div class="line" data-time="198">If the high was worth the pain</div>
+  <div class="line" data-time="200">Got a long list of ex-lovers</div>
+  <div class="line" data-time="203">They'll tell you I'm insane</div>
+  <div class="line" data-time="205">Cause you know I love the players</div>
+  <div class="line" data-time="207">And you love the game</div>
+  <div class="line" data-time="210">Cause we're young and we're reckless</div>
+  <div class="line" data-time="213">We'll take this way too far</div>
+  <div class="line" data-time="215">It'll leave you breathless, mm</div>
+  <div class="line" data-time="217">Or with a nasty scar</div>
+  <div class="line" data-time="220">Got a long list of ex-lovers</div>
+  <div class="line" data-time="223">They'll tell you I'm insane</div>
+  <div class="line" data-time="225">But I've got a blank space, baby</div>
+  <div class="line" data-time="229">And I'll write your name</div>
+</div>
+ </div>
+  
+ <div class="hidden" style="display:none !important">
+<div id="lyric-8">
+    
+     <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="15">I love You, Lord</div>
+  <div class="line" data-time="20">Oh, Your mercy never failed me</div>
+  <div class="line" data-time="26">All my days, I've been held in Your hands</div>
+  <div class="line" data-time="34">From the moment that I wake up</div>
+  <div class="line" data-time="38">Until I lay my head</div>
+  <div class="line" data-time="42">Oh, I will sing of the goodness of God</div>
+  <div class="line" data-time="53">And all my life You have been faithful</div>
+  <div class="line" data-time="62">And all my life You have been so, so good</div>
+  <div class="line" data-time="70">With every breath that I am able</div>
+  <div class="line" data-time="76">Oh, I will sing of the goodness of God</div>
+  <div class="line" data-time="89">I love Your voice</div>
+  <div class="line" data-time="94">You have led me through the fire</div>
+  <div class="line" data-time="99">And in darkest night You are close like no other</div>
+  <div class="line" data-time="108">I've known You as a Father</div>
+  <div class="line" data-time="112">I've known You as a Friend</div>
+  <div class="line" data-time="116">And I have lived in the goodness of God, ohh</div>
+  <div class="line" data-time="127">And all my life You have been faithful</div>
+  <div class="line" data-time="136">And all my life You have been so, so good</div>
+  <div class="line" data-time="144">With every breath that I am able</div>
+  <div class="line" data-time="150">Oh, I will sing of the goodness of God</div>
+  <div class="line" data-time="157">[Instrumental Break]</div>
+  <div class="line" data-time="174">yeah!</div>
+  <div class="line" data-time="177">so good</div>
+  <div class="line" data-time="181">Your goodness is running after, it's running after me</div>
+  <div class="line" data-time="190">Your goodness is running after, it's running after me</div>
+  <div class="line" data-time="197">With my life laid down, I'm surrendered now</div>
+  <div class="line" data-time="201">I give You everything</div>
+  <div class="line" data-time="206">Cause Your goodness is running after, it's running after me, </div>
+  <div class="line" data-time="215">Your goodness is running after, it's running after me</div>
+  <div class="line" data-time="224">Your goodness is running after, it's running after me</div>
+  <div class="line" data-time="230">With my life laid down, I'm surrendered now</div>
+  <div class="line" data-time="235">I give You everything</div>
+  <div class="line" data-time="240">Cause Your goodness is running (It keeps running after me)</div>
+  <div class="line" data-time="252">And all my life You have been faithful</div>
+  <div class="line" data-time="260">And all my life You have been so, so good</div>
+  <div class="line" data-time="268">With every breath that I am able</div>
+  <div class="line" data-time="274">Oh, I will sing of the goodness of God</div>
+  <div class="line" data-time="282">Oh, I will sing of the goodness of God</div>
+  </div>
+ </div>
+
+<div class="hidden" style="display:none !important">
+<div id="lyric-9">
+    
+     <div class="line" data-time="0">Intro</div>
+  <div class="line" data-time="37">Pilit kong kinakaya</div>
+  <div class="line" data-time="43">Na bumangon mag-isa sa kama</div>
+  <div class="line" data-time="53">Kahit ginawa ko nang tubig ang alak</div>
+  <div class="line" data-time="62">Di tumatama (Woah)</div>
+  <div class="line" data-time="67">Kung sakali na magbago ang isip mo (Isip mo)</div>
+  <div class="line" data-time="75">Ako'y lagi lang namang nasa gilid mo (Laging nasa gilid mo)</div>
+  <div class="line" data-time="82">Kaso nga lang kahit na anong pilit ko</div>
+  <div class="line" data-time="88">Ako'y 'di mo nakikita, ooh-woah</div>
+  <div class="line" data-time="97">Hirap tanggaping 'di mo na 'ko kailangan</div>
+  <div class="line" data-time="101">Sana nama'y nilabanan mo</div>
+  <div class="line" data-time="104">Ano'ng nangyari sa tayo hanggang sa huli?</div>
+  <div class="line" data-time="109">Tuluyan bang kakalimutan na?</div>
+  <div class="line" data-time="112">Ayoko pang mawalan ng pag-asa</div>
+  <div class="line" data-time="116">Mga mata mo'y masilayan ko</div>
+  <div class="line" data-time="120">At kahit ano pa'ng gawin kong pagkukunwari</div>
+  <div class="line" data-time="124">Ay tila ba nakalimutan na'ng kalimutan ka</div>
+  <div class="line" data-time="129">Walang ibang mapagsabihan, balikat ko'y tinatapik</div>
+  <div class="line" data-time="136">Papa'no ko tatanggapin na ika'y hindi na babalik?</div>
+  <div class="line" data-time="143">Pag naaalala kita, luha'y 'di maipahinga</div>
+  <div class="line" data-time="152">Mata'y wala nang mapiga, oh</div>
+  <div class="line" data-time="159">Di na ba talaga magbabago ang isip mo? (Ang isip mo)</div>
+  <div class="line" data-time="166">Yan na ba talaga ang ikakatahimik mo? (Ikakatahimik mo)</div>
+  <div class="line" data-time="174">Kasi kahit na ano pa'ng gawing pilit ko</div>
+  <div class="line" data-time="179">Ako'y 'di mo na makita, ooh-woah</div>
+  <div class="line" data-time="188">Hirap tanggaping 'di mo na 'ko kailangan</div>
+  <div class="line" data-time="192">Sana nama'y nilabanan mo (Sana nama'y nilabanan mo)</div>
+  <div class="line" data-time="195">Ano'ng nangyari sa tayo hanggang sa huli?</div>
+  <div class="line" data-time="200">Tuluyan bang kakalimutan na?</div>
+  <div class="line" data-time="203">Ayoko pang mawalan ng pag-asa</div>
+  <div class="line" data-time="207">Mga mata mo'y masilayan ko</div>
+  <div class="line" data-time="211">At kahit ano pa'ng gawin kong pagkukunwari</div>
+  <div class="line" data-time="215">Ay tila ba nakalimutan na'ng kalimutan ka</div>
+  <div class="line" data-time="220">[Instrumental Break]</div>
+  <div class="line" data-time="249">Hirap tanggaping 'di mo na 'ko kailangan</div>
+  <div class="line" data-time="253">Sana nama'y nilabanan mo (Nilabanan mo)</div>
+  <div class="line" data-time="256">Ano'ng nangyari sa tayo hanggang sa huli?</div>
+  <div class="line" data-time="261">Tuluyan bang kakalimutan na?</div>
+  <div class="line" data-time="264">Ayoko pang mawalan ng pag-asa</div>
+  <div class="line" data-time="268">Mga mata mo'y masilayan ko (Mga mata)</div>
+  <div class="line" data-time="271">At kahit ano pa'ng gawin kong pagkukunwari</div>
+  <div class="line" data-time="276">Ay tila ba nakalimutan na'ng kalimutan ka
+  </div>
+</div>
+</div>
+  </div>
+  <script src="MyPlaylist.js"></script>
+</body>
+</html>

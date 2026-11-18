@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="icon" type="logo/.jpg" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Searchbar.css">
+</head>
+<body>
+    <nav>
+   <a href="search.html" class="nav-link"></a>
+                <!--<span>⌕</span> Search-->
+   <a href="Homepage.html" class="home-link">⌂ Home</a>
+            </nav>
+    <div class="container">
+        <h1>Search</h1>
+
+    <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search songs..."
+          oninput="searchSongs()"
+        >
+            <button onclick="searchSongs()">
+              <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        
+        <h2>Search Results</h2>
+        <div id="songList"></div>
+
+    
+        <h2>Recently Played</h2>
+        <div id="recentList"></div>
+    </div>
+
+    <script src="Searchbar.js"></script>
+</body>
+</html>
